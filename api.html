@@ -1,0 +1,343 @@
+<!doctype html>
+
+<html lang="zh">
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<meta name="robots" content="noindex, nofollow">    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<meta charset="utf-8"/>
+
+    <script src="https://api.oick.cn//style/layui/layui.all.js"></script>
+
+    <link rel="stylesheet" href="https://api.oick.cn//style/layui/css/layui.css">
+
+    <link rel="stylesheet" href="https://api.oick.cn//style/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" id="css-main" href="https://api.oick.cn//style/css/oneui.css">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+
+        .url{word-break:break-all;cursor:pointer;margin-left:5px;color:#777;border:none;border-radius:0;border-bottom:2px solid #5FB878;}
+
+        .simpleTable{line-height:20px;padding-bottom:16px;}
+
+        .linep{font-size:14px;font-weight:700;color:#555;padding-left:14px;height:16px;line-height:16px;margin-bottom:18px;position:relative;margin-top:15px;}
+
+        .linep:before{content:'';width:4px;height:16px;background:#00aeff;border-radius:2px;position:absolute;left:0;top:0;}
+
+        ::-webkit-scrollbar{width:9px;height:9px}
+
+        ::-webkit-scrollbar-track-piece{background-color:#ebebeb;-webkit-border-radius:4px}
+
+        ::-webkit-scrollbar-thumb:vertical{height:32px;background-color:#ccc;-webkit-border-radius:4px}
+
+        ::-webkit-scrollbar-thumb:horizontal{width:32px;background-color:#ccc;-webkit-border-radius:4px}
+
+</style>
+
+<style type="text/css">
+
+        body{cursor:url('https://api.oick.cn//style/cur/curos.cur'),auto;}
+
+        a{cursor:url('https://api.oick.cn//style/cur/curoslink.cur'),auto;}
+
+        p{cursor:url('https://api.oick.cn//style/cur/curostext.cur'),auto;}
+
+        input{cursor:url('https://api.oick.cn//style/cur/curostext.cur'),auto;}
+
+        button{cursor:url('https://api.oick.cn//style/cur/curoslink.cur'),auto;}
+
+        img{cursor:url('https://api.oick.cn//style/cur/curos.cur'),auto;}
+
+</style>
+
+    <title>物实api-物实二次开发助手</title>
+
+    <meta name="description" content="物实api">
+
+    <meta name="keywords" content="物理实验室,物理实验室apiapi,物实获取用户头像">
+
+    <meta name="author" content="故事里的人">
+
+    
+
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+	  <nav class="nav_jsxs">
+
+		<span style="float: left;"><p class="logo_jsxs" onclick='alert("你想帮我做首页?")'></span>
+
+		<!--<a href="">首页</a>
+
+		<a href="https://www.8090mc.cn" target="_blank">博客</a>
+
+		-->
+
+		<!--<a href="<mailto:xiegushi2022@163.com" text-align=right>联系我们</a>-->
+
+	  </nav>
+
+	  <div class="box-text">
+
+		<h1><a href="/" style="color:#fff">物实公开apiAPI</a></h1>
+
+		<p>稳定、快速、免费的 API 接口服务<br><span class="package-amount">共收录了 <strong>1</strong> 个接口</span> · <span class="package-amount">当前接口调用 <strong>[鬼知道多少]</strong> 次</span>
+
+		</p>
+
+	  </div>
+
+	</header>
+
+    <div class="layui-container">
+
+	  <div class="layui-row">
+
+		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+
+		  <!--<legend>获取用户历史头像 - API</legend>-->
+
+		</fieldset>
+
+		<blockquote class="layui-elem-quote">查询用户历史头像</blockquote>
+
+	  </div>
+
+	  <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+
+		<ul class="layui-tab-title" style="text-align: center!important;">
+
+		  <li class="layui-this">API文档</li>
+
+		  <li>错误码参照</li>
+
+		  <li>示例代码</li>
+
+		</ul>
+
+		<div class="layui-tab-content">
+
+		  <div class="layui-tab-item layui-show">
+
+			<p class="simpleTable">
+
+			  <span class="layui-badge layui-bg-black">接口地址：</span>
+
+			  <span class="url" data-clipboard-text="https://api.oick.cn/icp/api.php">http://physics-static-cn.turtlesim.com:80/</span>
+
+			</p>
+
+			<p class="simpleTable">
+
+			  <span class="layui-badge layui-bg-green">返回格式：</span>
+
+			  <span class="url" data-clipboard-text="JSON">图片</span>
+
+			</p>
+
+			<p class="simpleTable">
+
+			  <span class="layui-badge">请求方式：</span>
+
+			  <span class="url" data-clipboard-text="GET">GET</span>
+
+			</p>
+
+			<p class="simpleTable">
+
+			  <span class="layui-badge layui-bg-blue">请求示例：</span>
+
+			  <span class="url" data-clipboard-text="https://api.oick.cn/icp/api.php?url=qq.com">  http://physics-static-cn.turtlesim.com:80/users/avatars/6157/ee/14/cc716604ea612c96/1.jpg!small.round</span>
+
+			</p>
+
+			<p class="linep">请求参数说明：</p>
+
+			<table class="layui-table" lay-size="sm">
+
+			  <thead>
+
+				<tr>
+
+				  <th>名称</th>
+
+				  <th>必填</th>
+
+				  <th>类型</th>
+
+				  <th>说明</th>
+
+				</tr>
+
+			  </thead>
+
+			  <tbody>
+
+				<tr><td>type</td><td>否</td><td>String</td><td>图片参数[small.round,full,tiny.round]，默认full</td></tr>
+
+				
+
+			  </tbody>
+
+			</table>
+
+			<font color="red" size=0.5>请求时，请把该参数放在!(而不是?)之后，无需写参数名称，直接代值</font>
+
+			<font color="red" size=0.5>例如  !small.round</font>
+
+			<p class="linep">返回参数说明：</p>
+
+			<table class="layui-table" lay-size="sm">
+
+			  无返回参数，直接回调图片
+
+			</table>
+
+			<p class="linep">返回示例：</p>
+
+			 
+
+			  <img src="http://physics-static-cn.turtlesim.com:80/users/avatars/6157/ee/14/cc716604ea612c96/1.jpg!small.round" />
+
+			
+
+		  </div>
+
+		  <div class="layui-tab-item">
+
+			<p class="linep">错误码格式说明：</p>
+
+			<table class="layui-table" lay-size="sm">
+
+			  <thead>
+
+				<tr>
+
+				  <th>名称</th>
+
+				  <th>类型</th>
+
+				  <th>说明</th>
+
+				</tr>
+
+			  </thead>
+
+			  <tbody>
+
+				<tr>
+
+		           <td>msg</td>
+
+				   <td>xml</td>
+
+				   <td>返回结果提示信息！</td>		 
+
+			   </tr>
+
+			  </tbody>
+
+			</table>	
+
+			<p class="linep">错误码示例：</p>
+
+			<pre class="layui-code">
+
+			  <xmp>
+
+  <Error>
+
+	<Code>NoSuchKey</Code>
+
+	<Message>The specified key does not exist.</Message>
+
+	<RequestId>63A27CD5DA8A7939381BAA78</RequestId>
+
+	<HostId>physics-static-cn.turtlesim.com</HostId>
+
+	<Key>users/avatars/6157/ee/14/cc716604ea612c96/114513.jpg!small.round</Key>
+
+  </Error>
+
+			  </xmp>
+
+			</pre>
+
+		  </div>
+
+		  <div class="layui-tab-item">
+
+			<p class="linep">代码示例：</p>
+
+			<pre class="layui-code">
+
+			  <xmp>
+
+	<!DOCTYPE html>
+
+	<html>
+
+	  <head> </head>
+
+	  <body>
+
+		 <img src="http://physics-static-cn.turtlesim.com:80/users/avatars/6157/ee/14/cc716604ea612c96/1.jpg!small.round" />
+
+	  </body>
+
+	</html>				
+
+			</xmp>
+
+		  </pre></div>
+
+		</div>
+
+	  </div>
+
+    </div>
+
+    <script src="https://api.oick.cn//style/js/clipboard.min.js"></script>
+
+<script>
+
+        var clipboard = new ClipboardJS('.url');
+
+        clipboard.on('success', function(e) {
+
+            layer.msg('复制成功!');
+
+        });
+
+        clipboard.on('error', function(e) {
+
+            layer.msg('复制成功!');
+
+        });
+
+</script>
+
+    <!-- 站长统计代码 -->
+
+    <span style="display: none">
+
+	  <!-- 各类统计代码都放在这里…… -->
+
+<script type="text/javascript">
+
+</script>
+
+    </span>
+
+  </body>
+
+</html>
