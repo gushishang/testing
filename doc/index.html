@@ -1,0 +1,95 @@
+<html>
+<head>
+    <!--废话 开始-->
+    <title>物实创作工具</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="goose">
+    <meta name="keywords" content="物理实验室,物理实验室创作助手,物实,Physics Lab,markdown转为unity,unity富文本,markdown,物理实验课app,创作工具">
+    <meta name="description" content="物理实验室创作工具，在线创作富文本，markdown转换为unity，markdown转换为物理实验室富文本，同时也是物理实验室指南">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 引入依赖内容 开始 -->
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./js/tj.js"></script>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="https://lib.baomitu.com/sweetalert/2.1.2/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="j">
+        <div class="container">
+            <div class="box">
+                <div class="box2" onclick="tempAlert()">
+                <!--按钮提示 开始-->
+                    <div class="inner-box red">报错</div>
+                    <div class="inner-box yellow">店小二</div>
+                    <div class="inner-box blue">参与开发</div>
+                </div>
+            </div>
+            <div class="box3">
+                <h4 class="h4" align="center">unity富文本创作工具</h4>
+                <textarea id="textInput" class="area"></textarea>
+                <div align="center">
+                    <!--操作按钮 开始-->
+                    <button id="display" class="btn">一键转换</button>
+                    <button id="copyButton" class="btn">复制</button><br>
+                </div>
+                <div id="outputDisplay" class="area"></div>
+            </div>
+        </div>
+    </div>
+    <!--主要逻辑 开始-->
+    <script>
+        function tempAlert() {
+            swal(
+                "咕咕咕",
+                "这只鸽子还没写，以后会补上的。参与贡献物实联系@故事里的人 <xiegushi2022@163.com>",
+                "error"
+            );
+        }
+        $(document).ready(function() {
+            $("#display").click(function() {
+                $("#outputDisplay").text("");
+                var inputData = $("#textInput").val();
+                if (inputData === '') {
+                    swal("内容不能为空", "", "error");
+                }
+                var markdownText = $("#textInput").val();
+                var unityText = display(markdownText, {
+                    app: [true,false], //[是否执行,执行是否只返回字符而不加颜色和大小]
+                    process: true,
+                    special: true,
+                    url: true,
+                    project: [true,''] //[是否执行,标志]
+                });
+                $("#outputDisplay").html("<pre>" + unityText + "</pre>");
+            });
+
+            $("#copyButton").click(function() {
+                var outputText = $("#outputDisplay").text().trim();
+                var tempTextarea = $('<textarea>').val(outputText);
+                $('body').append(tempTextarea);
+                tempTextarea.select();
+                document.execCommand("copy");
+                tempTextarea.remove();
+                copy();
+            });
+        });
+
+        // 动态调整页面高度以适应窗口大小
+        var originalHeight = window.innerHeight;
+        window.addEventListener('resize', function() {
+            var currentHeight = window.innerHeight;
+            if (currentHeight < originalHeight) {
+                document.body.style.height = originalHeight + 'px';
+            } else {
+                document.body.style.height = 'auto';
+            }
+        });
+
+        function copy() {
+            swal("复制成功！", "", "success");
+        }
+    </script>
+</body>
+</html>
