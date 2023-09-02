@@ -1,0 +1,226 @@
+这是原文：
+# title
+
+> just for testing 
+
+## part 1
+<font color=red>red</font>
+This is a **bold** and *italic* text.
+We are <font size=40>largely </font> not amused。
+- Item 1
+- Item 2
+- Item 3
++ Item 1
++ Item 2
++ Item 3
+[Visit my website](https://example.com)
+[Experiment](https://turtlesim.com/plc/?chinese-experiment-63?)
+[User](https://turtlesim.com/plc/?chinese-user-42?)
+[Discussion](https://turtlesim.com/plc/?chinese-discussion-99?)
+~~~
+
+## part 2 错误写法修正
+我们在gitee上有一个physics laB的仓库，管理员是@@紫兰斋， 共有13 位成员。
++ 他对你说，胡桃是璃月火A？？？ 
++ ~~二十楼变成猫娘~~
++ 令人无语。。。
++ 你说得对，但是原神是米哈游卡发的一款开放世界冒险游戏！！！
++ 诶心海嘿嘿嘿心海!!!???
+
+## part 3
+遗憾 紫兰斋没更新
+bug 出了点小问题，font的color属性正则没搞对
+修复 下次一定修
+赞 欢迎大家支持这个作品
+讨论 有什么疑惑可以在评论区留言探讨
+注释 有时候注释是用来凑字数的
+
+这是转换后的结果：
+<b><size=52>Title</size></b>
+
+  <color=#666> | <size=28><size=28><size=28>just for testing </size></size></size></color>
+
+<b><size=45>part 1</size></b>
+<font color=red>red</font>
+This is a <b>bold</b> and <i>italic</i> text. We are <size=40><size=40><size=40>largely </size></size></size> not amused。
+<size=20><size=20><size=20>● </size></size></size>Item 1
+<size=20><size=20><size=20>● </size></size></size>Item 2
+<size=20><size=20><size=20>● </size></size></size>Item 3
+1. Item 1
+2. Item 2
+3. Item 3
+<color=#2881e0></color><color=#2981E6>Visit my website</color>
+<color=#2881e0></color><color=#2981E6>Experiment</color>
+<color=#2881e0></color><color=#2981E6>User</color>
+<color=#2881e0></color><color=#2981E6>Discussion</color>
+==========换行=========
+
+<b><size=45>part 2 错误写法修正</size></b>
+我们在 Gitee 上有一个 Physics Lab 的仓库，管理员是@紫兰斋， 共有 13 位成员。
+他对你说，喵？ 二<size=60>̶</size>十<size=60>̶</size>楼<size=60>̶</size>变<size=60>̶</size>成<size=60>̶</size>猫<size=60>̶</size>娘<size=60>̶</size>
+令人无语……
+你说得对，但是原神是米哈游卡发的一款开放世界冒险游戏！
+
+<b><size=45>part 3</size></b>
+<color=#2ae> | $</color>紫兰斋没更新
+<color=#f00> | $</color>在物实瑟瑟是被禁止的
+<color=#511> | $</color>出了点小问题
+<color=#a1f> | $</color>下次一定修
+<color=#f79> | $</color>欢迎大家支持这个作品
+<color=#076> | $</color>有什么疑惑可以在评论区留言探讨
+
+这是修改的内容：
+tips 注意#,>,特殊名称等要加空格，具体同markdown通用语法
+
+1. 函数名：markdownToUnity
+   参数：markdown（Markdown格式的文本）
+   返回值：转换为Unity富文本格式后的文本
+
+2. 转换标题：
+   - 使用正则表达式匹配不同级别的标题，如#####、####、###等，并根据级别设置字体大小。
+   - 替换规则：`<b><size=字体大小>标题内容</size ></b>`
+
+3. 转换换行：
+   - 将Markdown中的三个连续的波浪线（~~~）、短划线（---）和星号（***）替换为统一的换行标志。
+   - 替换规则："==========换行========="
+
+4. 列表项转换：
+   - 将Markdown中的列表项（以"-"开头）转换为Unity富文本格式的列表项。
+   - 替换规则："<size=20><size=20><size=20>● </size></size></size>列表项内容"
+
+5. 文本样式转换：
+   - 将Markdown中的加粗（**文本**）、斜体（*文本*）转换为Unity富文本格式。
+   - 替换规则：
+     - 加粗："<b>文本内容</b>"
+     - 斜体："<i>文本内容</i>"
+
+6. 代码块转换：
+   - 将Markdown中的代码块（```代码```）转换为Unity富文本格式的代码块。
+   - 替换规则："<size=26><size=26><size=26><color=#AAAAAA>代码内容</color></size></size></size>"
+
+7. 链接转换：
+   - 将Markdown中的链接（[文本](URL)）转换为Unity富文本格式的链接。
+   - 替换规则：
+     - 图片链接："<color=#808080>[图片]</color>[描述/没有为暂无描述]"
+     - 物实链接："<user/experiment/discussion=uid>文本内容</闭标签>"
+
+8. 字体和颜色转换：
+   - 将Markdown中的"<font size=*>*</font>"标签和"<font color=*>*</font>"标签转换为Unity富文本格式。
+   - 替换规则：
+     - font标签："<size=字体大小>文本内容</size>"
+     - color标签："<color=颜色值>文本内容</color>"
+
+9. 单行代码转换：
+   - 将Markdown中的单行代码（`代码`）转换为Unity富文本格式。
+   - 替换规则："<size=28><size=28><size=28>`代码`</size></size></size>"
+
+10. 引用转换：
+    - 将Markdown中的引用（以"> "开头）转换为Unity富文本格式的引用样式。
+    - 替换规则："<color=#666> | <size=28><size=28><size=28>引用内容</size></size></size></color>"
+
+11. 行计数器：
+    - 将Markdown中的行计数器（以"+ "开头）转换为统一的计数格式。
+    - 替换规则：将"+ "替换为"行号. "，行号从1开始计数。
+
+12. 删除线转换：
+    - 将Markdown中的删除线（~~文本~~或<del>文本</del>）转换为Unity富文本格式的删除线样式。
+    - 替换规则："<size=60>̶</size>文本内容"
+
+1. 函数名：specialTextToUnity -灵感来源 @李维嘉
+    参数：markdown（Markdown格式的文本）
+    返回值：转换为Unity富文本格式后的文本
+
+2. 特殊文本转换：
+    - 将Markdown中的特殊关键词转换为Unity富文本格式的样式。
+    - 替换规则：该行以"关键词 "开头
+
+3. 授权替换：
+   - 授权关键词："授权"
+   - 替换规则：将关键词替换为 `<color=#017f> | </color>`
+
+4. 链接替换：
+   - 链接关键词："链接"
+   - 替换规则：将关键词替换为 `<color=#28e> | </color>`
+
+5. 注意替换：
+   - 注意关键词："注意"
+   - 替换规则：将关键词替换为 `<color=#cb1> | </color>`
+
+6. 禁止替换：
+   - 禁止关键词："禁止"
+   - 替换规则：将关键词替换为 `<color=#f00> | </color>`
+
+7. 遗憾替换：
+   - 遗憾关键词："遗憾"
+   - 替换规则：将关键词替换为 `<color=#2ae> | </color>`
+
+8. 启发替换：
+   - 启发关键词："启发"
+   - 替换规则：将关键词替换为 `<color=#380> | </color>`
+
+9. bug替换：
+   - bug关键词："bug"
+   - 替换规则：将关键词替换为 `<color=#511> | </color>`
+
+10. 方法替换：
+    - 方法关键词："方法"
+    - 替换规则：将关键词替换为 `<color=#a60> | </color>`
+
+11. 纪念替换：
+    - 纪念关键词："纪念"
+    - 替换规则：将关键词替换为 `<color=#fb0> | </color>`
+
+12. 改进替换：
+    - 改进关键词："改进"
+    - 替换规则：将关键词替换为 `<color=#135> | </color>`
+
+13. 支持替换：
+    - 支持关键词："支持"
+    - 替换规则：将关键词替换为 `<color=#091> | </color>`
+
+14. 修复替换：
+    - 修复关键词："修复"
+    - 替换规则：将关键词替换为 `<color=#a1f> | </color>`
+
+15. 赞替换：
+    - 赞关键词："赞"
+    - 替换规则：将关键词替换为 `<color=#f79> | </color>`
+
+16. 现象替换：
+    - 现象关键词："现象"
+    - 替换规则：将关键词替换为 `<color=#140> | </color>`
+
+17. 目标替换：
+    - 目标关键词："目标"
+    - 替换规则：将关键词替换为 `<color=#a09> | </color>`
+
+18. 讨论替换：
+    - 讨论关键词："讨论"
+    - 替换规则：将关键词替换为 `<color=#076> | </color>`
+
+19. 特殊符号替换：
+   - 特殊符号：""
+   - 替换规则：将特殊符号替换为 `<color=#aaa></color>`
+
+20. 注释替换：
+   - 注释关键词："注释"
+   - 替换规则：将关键词替换为 `<color=#aaa> | </color>`
+   
+1. 函数名：specialTextToUnity -灵感来源 @Gitee 开源指北
+    参数：text（Markdown格式的文本）
+    返回值：转换为Unity富文本格式后的文本
+
+2. 不规范内容转换
+   - 全局替换不规范内容
+   - 替换规则：
+     - 英文与中文相接自动添加空格：在英文与中文相接的位置自动添加一个空格。
+     - 连续的问号和感叹号只保留一个：将连续出现的问号或感叹号缩减为一个。
+     - 多个"."或"。"替换为"……"：将连续出现的多个句号或中文句号替换为"……"。
+     - 标点符号后面跟英文字母时加空格：在标点符号后面与英文字母之间添加一个空格。
+     - 全角标点与其他字符之间不加空格：在全角标点符号与其他字符之间不添加空格。
+     - 数字与单位之间无需增加空格：在数字与单位之间不添加空格。
+     - 中文与数字之间增加空格：在中文字符与数字之间添加一个空格。
+     
+3. 错误拼写纠正
+   - 对专有名词拼写大小写不规范纠正
+   - 替换规则：正确拼写：Gitee、GitHub、Foursquare、Microsoft Corporation、Google、Facebook, Inc
