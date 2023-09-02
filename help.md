@@ -1,6 +1,6 @@
 tips 注意#,>,特殊名称等要加空格，具体同markdown通用语法
 
-1. 函数名：markdownToUnity
+### 1. 函数名：markdownToUnity
    参数：markdown（Markdown格式的文本）
    返回值：转换为Unity富文本格式后的文本
 
@@ -54,7 +54,8 @@ tips 注意#,>,特殊名称等要加空格，具体同markdown通用语法
     - 将Markdown中的删除线（~~文本~~或<del>文本</del>）转换为Unity富文本格式的删除线样式。
     - 替换规则："<size=60>̶</size>文本内容"
 
-1. 函数名：specialTextToUnity -灵感来源 @李维嘉
+### 1. 函数名：specialTextToUnity 
+    灵感来源 @李维嘉
     参数：markdown（Markdown格式的文本）
     返回值：转换为Unity富文本格式后的文本
 
@@ -134,7 +135,7 @@ tips 注意#,>,特殊名称等要加空格，具体同markdown通用语法
    - 注释关键词："注释"
    - 替换规则：将关键词替换为 `<color=#aaa> | </color>`
    
-1. 函数名：specialTextToUnity -灵感来源 @Gitee 开源指北
+### 1. 函数名：specialTextToUnity -灵感来源 @Gitee 开源指北
     参数：text（Markdown格式的文本）
     返回值：转换为Unity富文本格式后的文本
 
@@ -153,7 +154,7 @@ tips 注意#,>,特殊名称等要加空格，具体同markdown通用语法
    - 对专有名词拼写大小写不规范纠正
    - 替换规则：正确拼写：Gitee、GitHub、Foursquare、Microsoft Corporation、Google、Facebook, Inc  
 
-1. 函数名：replacePhysicsUrl - 灵感来源：<user=5dbd8c3a581da82d4fd165e2>麦子</user>
+### 1. 函数名：replacePhysicsUrl - 灵感来源：<user=5dbd8c3a581da82d4fd165e2>麦子</user>
     参数：markdown
     返回值：转换为Unity富文本格式后的文本
     
@@ -165,7 +166,7 @@ tips 注意#,>,特殊名称等要加空格，具体同markdown通用语法
       - 参数：为需要筛选的标签，例如：精选，小说；多个标签（与关系）请用","分割，例如："<讨论 小作品,聊天>"
       - 其他情况不进行替换。
 
-1. 函数名：replaceApps -灵感来源 李维嘉
+### 1. 函数名：replaceApps -灵感来源 李维嘉
     参数：
     返回值：转换为Unity富文本格式后的文本
     
