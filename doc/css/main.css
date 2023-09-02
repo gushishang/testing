@@ -1,0 +1,293 @@
+body{
+  background-color:rgba(128,128,128,0.05);
+}
+.tips{
+  font-size:4vw;
+  color:grey;
+  text-align:center;
+  margin-top: -15px;
+  font-style:italic;
+}
+.container {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.box {
+  height: 8%;
+  background-color: rgba(128, 128, 128, 0.1);
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #cccccc;
+  display: flex;
+  justify-content: flex-end;
+align-items: flex-end;
+}
+
+.box2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  background-color: #D75E5A;
+}
+
+.yellow {
+  background-color: #EFAD4D;
+}
+
+.blue {
+  background-color: #5CBFDC;
+}
+
+.inner-box {
+  display: inline-block;
+  margin-right: 3vw;
+  border-radius: 1vw;
+  color: white;
+  padding: 0.3em 0.3em;
+  font-size: 3vw;
+  white-space: nowrap;
+}
+
+.box3 {
+  height: ;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #cccccc;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 0 0 10px 10px;
+  width: 80%:
+}
+
+.btn {
+  display: inline-block;
+  margin-left: 2vw;
+  font-size: 4vw ;
+  white-space: nowrap;
+  background-color: transparent;
+  opacity: 0.5;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: black;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.area {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 70vw;
+  height: 30%;
+  overflow: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  white-space: pre-wrap;
+}
+
+.yulan {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 70vw;
+  height: 30%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.head {
+  box-sizing: border-box;
+  display: none;
+  height: 20%;
+  border-radius: 10px 10px 0 0;
+  width: onto;
+  background-color: #27AE61;
+}
+
+.bottom {
+  box-sizing: border-box;
+  display: block;
+  height: 10%;
+  border-radius: 0 0 10px 10px;
+  width: onto;
+  background-color: #27AE61;
+}
+
+.nav {
+  box-sizing: border-box;
+  display:inline-block;
+  height: 5%;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 1vw;
+
+  padding-top: 5%;
+  text-align: right;
+  width: 100vw;
+}
+
+.nav a {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: inline;
+  height: auto;
+  outline-width: 0px;
+  text-decoration-line: none;
+  width: auto;
+  font-size: 4vw;
+  padding-left: 2vw;
+  padding-right: 6vw;
+}
+
+.j {
+  display: block;
+  padding-bottom:10%;
+  height: onto;
+  background-color: rgba(128, 128, 128, 0.1);
+}
+.title {
+  box-sizing: border-box;
+  display: block;
+  font-size: 8vw;
+  font-weight: 500;
+  height: 5vh;
+  line-height: onto;
+  margin-bottom: 3vh;
+  margin-top: 2vw;
+  text-shadow: rgba(0, 0, 0, 0.1) -5px 5px 0;
+  padding-top:3vw;
+  text-align:center;
+  color:white;
+}
+.title2{
+  display:none;
+  box-sizing: border-box;
+  font-size: 5vh;
+  font-weight: 500;
+  height: 5vh;
+  line-height: onto;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+  text-shadow: rgba(0, 0, 0, 0.1) -5px 5px 0;
+  padding-top:5vw;
+  text-align:center;
+  color:white;
+}
+@media screen and (max-width: 480px) {
+  /* 在小于等于480像素宽度的设备上应用特定样式 */
+  .head{
+   /* display:block;*/
+   }
+}
+@media screen and (orientation: landscape) and (min-width: 1024px) {
+  /* 在此处添加适配横屏的样式 */
+  .nav a {
+    font-size:3vh;
+  }
+  .btn {
+    font-size: 1.5vw ;
+  }
+  .h4{
+    font-size:3vw;
+  }
+  .box{
+    height:10%;
+  }
+  .inner-box{
+    font-size:2vw;
+  }
+  .title{
+    display:none;
+  }
+  .title2{
+    display:block;
+  }
+
+}
+}
+
+
+.h4{
+  text-align:center;
+}
+
+
+/* iPad横屏样式 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+  .nav a {
+    font-size:3vh;
+  }
+  .btn {
+    font-size: 2vw ;
+  }
+  .h4{
+    font-size:3vw;
+  }
+  .box{
+    height:10%;
+  }
+  .inner-box{
+    font-size:2vw;
+  }
+  .title{
+    margin-top:-2vh;
+  }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .h4{
+    font-size:4vw;
+  }
+}
+
+footer {
+  box-sizing: border-box;
+  display: block;
+  height: 20%;
+  border-radius: 0 0 10px 10px;
+  width: onto;
+  background-color: #27AE61;
+}
+
+.footer-box {
+  color: white;
+}
+
+.footer-box h4 {
+  color: white;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 5px;
+}
+
+.footer-box ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-info {
+  text-align: right;
+  font-size: 12px;
+  color: #ccc;
+  text-direction:none;
+}
