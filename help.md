@@ -192,5 +192,3 @@ tips 注意#,>,特殊名称等要加空格，具体同markdown通用语法
     -  替换为Dropbox，颜色为 #3374e3
     -  替换为Adobe，颜色为 #f90404
     -  替换为Appstore，颜色为 #12b3fa
-
-
