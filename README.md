@@ -1,39 +1,51 @@
-# 物实富文本转换
+## 物实富文本创作工具
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+### 简介
 
-#### 软件架构
-软件架构说明
+这东西是我的1200粉丝福利，可以访问网站查看：[https://gushishang.github.io](https://gushishang.github.io) ，ui没做，慢慢填。逆天vh，下回老老实实用px算了。手机端页眉页脚忘记删了，电脑的字又太大，哎慢慢搞。
 
+github托管，开不了正常，不同时间多试试，移动可能直接访问不了。我这边电信加载很快，测速来看联通最快，和物实服务器响应速度差不多。
 
-#### 安装教程
+### 教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+教程放在使用文档（慢着几个版本），需要的自取。有点长慢慢看，有规律的。
 
-#### 使用说明
+语法尽量遵从了markdown，不理解的可以问我/跳过，有些时候记得加空格
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+~~既然markdown语言叫做md，我这个加上中国特色，就叫cnmd吧（）~~
 
-#### 参与贡献
+### 更新日志
 
-1.  Fork 本仓库
+2023/8/12：开始构思
+
+2023/8/14：上传 0.1.1 版本至 GitHub 和另一个托管平台
+
+2023/8/15 0.1.2 更新：
+- 改用<{颜色}>{内容}</>的写法取代<font color={颜色}>{内容}</font>
+- 删除页脚、页面头部导航栏和标题，以方便以后适配物实内部浏览器
+
+2023/8/18 0.1.3 更新：
+- 优化函数，使用 main() 替换整体替换函数，并增加传参功能以支持自选替换方式
+- 增加 replaceApps() 函数，用于替换":名称:"的 APP，受李维嘉启发
+- 优化算法，提升代码可读性和可维护性
+- 新增 physics_url() 函数，用于替换超链接作品列表，支持过滤物实作品标签，灵感来源：<user=5dbd8c3a581da82d4fd165e2>麦子</user>
+- 使用 main() 函数进行全部替换
+- main 函数支持传递配置参数
+- 更新文档注释
+- 更新说明文档
+- 接入百度统计
+
+0.1.4 更新：
+- 修复了 physics_url函数不能全局替换的问题
+- 使用更加简洁的语法代替match匹配内容
+
+0.1.5 更新
+- 增加了特定作品名称自动添加超链接的功能
+- 修改了配置方式，位于index.html第56行
+
+### 参与贡献
+1.  Fork 本仓库的dic文件夹下源码
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
